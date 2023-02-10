@@ -1,0 +1,11 @@
+.todo-list{
+    display: flex;
+    font-size: 16rem;
+    border-bottom: 1px solid #eee;
+    flex: auto;
+    justify-content: space-between;
+}
+
+.year-filter{
+    
+}

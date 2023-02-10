@@ -1,0 +1,46 @@
+<div class="login-wrapper">
+  <h2>Welcome</h2>
+  <form
+    class="login-form"
+    [formGroup]="loginGroup"
+    (ngSubmit)="handlerSubmit()"
+  >
+    <mat-form-field class="mat-form-field">
+      <mat-label>
+        <mat-icon>person</mat-icon>
+        <span>Username</span>
+      </mat-label>
+      <input
+        type="test"
+        matInput
+        formControlName="username"
+        placeholder="Please input username"
+      />
+      <mat-error *ngIf="loginGroup.get('username')?.hasError('required')">
+        Username is
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="mat-form-field">
+      <mat-label>
+        <mat-icon>key</mat-icon>
+        Password
+      </mat-label>
+      <input
+        type="password"
+        matInput
+        formControlName="password"
+        placeholder="Please input your password"
+      />
+      <mat-error *ngIf="loginGroup.get('password')?.hasError('required')">
+        Password is
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <div class="submit-btn">
+      <button mat-raised-button color="primary" type="submit">Log in</button>
+      &nbsp;or&nbsp;
+      <a (click)="registerHandler()">register now</a>
+    </div>
+  </form>
+</div>

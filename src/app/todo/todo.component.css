@@ -1,0 +1,21 @@
+.container{
+    width: 700rem;
+    margin: 20rem;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 1px 2px 20px #777;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.todo-header{
+    font-size: 16rem;
+    padding: 15rem;
+    border-bottom: 1px dotted #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

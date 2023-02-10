@@ -1,0 +1,7 @@
+<div class="todo-list" *ngFor="let item of todoService.todos">
+  <app-todo-item
+    [id]="item.id"
+    (todoId)="deleteTodo($event)"
+    (changeTodo)="changeStatus($event)"
+  ></app-todo-item>
+</div>

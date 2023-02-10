@@ -1,0 +1,65 @@
+<div class="login-wrapper">
+  <h2>Register for your Todo App</h2>
+  <form
+    class="login-form"
+    [formGroup]="registerGroup"
+    (ngSubmit)="registerHandler()"
+  >
+    <mat-form-field class="mat-form-field">
+      <mat-label>
+        <mat-icon>person</mat-icon>
+        <span>Username</span>
+      </mat-label>
+      <input
+        type="test"
+        matInput
+        formControlName="username"
+        placeholder="Please input username"
+      />
+      <mat-error *ngIf="registerGroup.get('username')?.hasError('required')">
+        Username is
+        <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="registerGroup.get('username')?.hasError('invalid')">
+        can't use
+        <strong>admin</strong>
+        as username
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="mat-form-field">
+      <mat-label>
+        <mat-icon>key</mat-icon>
+        Password
+      </mat-label>
+      <input
+        type="password"
+        matInput
+        formControlName="password"
+        placeholder="Please input your password"
+      />
+      <mat-error *ngIf="registerGroup.get('password')?.hasError('required')">
+        Password is
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="mat-form-field">
+      <mat-label>
+        <mat-icon>key</mat-icon>
+        Password Confirmation
+      </mat-label>
+      <input
+        type="password"
+        matInput
+        formControlName="pwdConfirm"
+        placeholder="Please input your password again"
+      />
+      <mat-error *ngIf="registerGroup.get('pwdConfirm')?.hasError('required')">
+        Password is
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <div class="submit-btn">
+      <button mat-raised-button color="primary" type="submit">Sign up</button>
+    </div>
+  </form>
+</div>

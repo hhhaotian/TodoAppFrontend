@@ -1,0 +1,102 @@
+.item-wrap{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700rem;
+}
+
+.item-date{
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px #777;
+    border-radius: 10px;
+    margin: 10rem 20rem;
+}
+
+
+.item-year{
+    width: 60rem;
+    height: 20rem;
+    line-height: 20rem;
+    background-color: rgba(215, 15, 15, 0.984);
+    font-size: 16rem;
+    color: #fff;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.item-day{
+    height: 40rem;
+    line-height: 40rem;
+    font-size: 16rem;
+    font-weight: bold;
+    
+}
+
+.item-todo{
+    flex: 90%;
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.item-operate{
+   display: flex;
+   flex-direction: row;
+   margin-right: 20rem;
+}
+
+.item-translate{
+    margin: 0 20rem
+}
+
+.item-translate:hover{
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.item-delete{
+    margin-right: 20rem;
+    height: 50rem;
+    flex: 10%;
+    
+}
+
+.delete{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    width: 10rem;
+    height: 10rem;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem
+}
+
+.delete:hover{
+    color: #fff;
+    background-color: rgba(215, 15, 15, 0.984);
+    border-radius: 50%;
+    width: 40rem;
+    border-radius: 10px;
+}
+
+.delete:hover::before{
+    content: "delete ";
+    font-size: 8rem;
+   
+    
+}
+
+.item-status{
+    display: flex;
+    
+}
+

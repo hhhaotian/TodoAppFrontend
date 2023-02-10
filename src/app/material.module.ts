@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatSelectModule} from '@angular/material/select';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+
+const modules = [
+  MatInputModule,
+  MatIconModule,
+  MatButtonModule,
+  MatChipsModule,
+  MatSelectModule,
+  MatGridListModule,
+  MatTableModule,
+  MatCardModule
+]
+
+@NgModule({
+  imports: [modules],
+  exports: [modules]
+})
+export class MaterialModule { }

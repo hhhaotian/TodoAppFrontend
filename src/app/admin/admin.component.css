@@ -1,0 +1,92 @@
+.container{
+  position: relative;
+  height: 100%;
+}
+
+.header{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 5rem 30rem;
+}
+
+.header h1{
+  font-size: 20rem;
+  text-decoration: underline;
+}
+
+.logs-wrapper{
+  position: absolute;
+  top:-30rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.logs{
+  position: absolute;
+  top: 20%;
+  left: 200rem;
+  width: 350rem;
+  height: 200rem;
+  margin: auto;
+  overflow: auto;
+}
+
+.logs h3{
+  font-size: 14rem;
+}
+
+.loglist{
+  font-size: 8rem;
+  padding: 20px;
+  line-height: 10rem;
+}
+
+.loglist > li{
+  margin: 5px 0
+}
+
+.table{
+    width: 700rem;
+    margin: 20rem auto
+}
+
+table {
+    width: 100%;
+  }
+  
+  tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  
+  .example-element-description {
+    padding: 16px;
+  }
+  
+
+  td a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+  }
+
