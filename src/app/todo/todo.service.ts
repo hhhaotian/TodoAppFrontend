@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Status, Todo, AddTodoResponse, GetTodoResponse, TranslateResponse } from '../interfaces'
-import { URL } from '../../../URL'
+import { URL } from '../../URL'
 
 @Injectable({
   providedIn: 'root'

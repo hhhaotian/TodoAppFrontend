@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AdminResponse, UserInfo, LogResponse } from '../interfaces'
-import {URL} from '../../../URL'
+import {URL} from '../../URL'
 
 @Injectable({
   providedIn: 'root'

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import {Validators, FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
 import { Response } from '../interfaces';
-import {URL} from '../../../URL'
+import {URL} from '../../URL'
 
 @Component({
   selector: 'app-login',
