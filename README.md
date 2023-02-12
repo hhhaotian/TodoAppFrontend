@@ -17,7 +17,6 @@ There are two types of users: normal users and admin
    #### Login to your account
    Input your registered username and password, and then click login. Now you are able to access and manage your todo list. You can check all your todo tasks, update the status of each todo, and translate any todo item into another language. You can also add a new todo by inputting your new todo task and corresponding deadline, and then clicking 'Add' button. You can leave the page by clicking 'Log out' button.
 
-___
 
 ## Admin
    There is only one default admin account. You can access the admin account (username: admin, password: admin123) via the login page. Once you login to the admin account, all of the current users are listed on this admin page, you can check the username, password, and how many times each user used the translation function, you can also check users' login records by clicking 'login info'
