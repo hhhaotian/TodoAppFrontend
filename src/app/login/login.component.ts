@@ -4,6 +4,7 @@ import {Validators, FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
 import { Response } from '../interfaces';
 import {URL} from '../../URL'
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent {
   constructor(
     private formBuilder: FormBuilder, 
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private snackBar: MatSnackBar
     ){}
 
   loginGroup = this.formBuilder.group({
@@ -45,10 +47,11 @@ export class LoginComponent {
           this.router.navigate(['/admin'])
         }
       }else{
-        console.log("error")
+        console.log(data)
+        this.snackBar.open("Login error, username or password is wrong", "OK", {duration:3000, verticalPosition:"top"})
       }
     }, error => {
-      console.log("cannot log in")
+      this.snackBar.open("Login error, please try again", "OK", {duration:3000, verticalPosition:"top"})
     })
 
     }

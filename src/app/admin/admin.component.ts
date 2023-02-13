@@ -27,17 +27,22 @@ export class AdminComponent implements OnInit{
     this.service.getUserList()
   }
 
+  showSpinner: boolean = false
   displayLog:boolean = false
-
   logs: Logs[]
   
   login(id: string){
+    this.showSpinner = true
     this.service.getUserLog(id).subscribe(
       res => {
         if(res.status === 'ok'){
           this.logs = res.data
           this.displayLog = true
-        }
+          this.showSpinner = false
+        } 
+      },
+      () => {
+        this.showSpinner = false
       }
     )
   }

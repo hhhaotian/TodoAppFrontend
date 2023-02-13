@@ -17,7 +17,6 @@ export class InputTodoComponent {
 
   addTodo(){
     this.todo = this.todo.trim()
-    this.date = this.date.trim()
     if(this.todo === "" || this.date === "") return
     this.todoService.addTodo(this.todo, this.date)
     this.todo = ""

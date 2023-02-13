@@ -42,11 +42,13 @@ export class TodoItemComponent implements OnInit {
 
   //Translate todo into one of language
   translateTodo(){
+    this.todoService.showSpinner = true
     const userId = localStorage.getItem("userId")
     this.todoService.translateTodo(this.id, this.selected, userId).subscribe(
       res => {
         if(res){
           this.todo = res.data.translations[0].translatedText
+          this.todoService.showSpinner = false
         }
       }
     )

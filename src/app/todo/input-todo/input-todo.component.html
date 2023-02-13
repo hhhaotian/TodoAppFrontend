@@ -1,6 +1,6 @@
 <div class="input-wrap">
   <div class="inputs">
-    <mat-form-field class="example-form-field">
+    <mat-form-field class="form-field">
       <mat-label>Todo</mat-label>
       <input
         matInput
@@ -19,9 +19,15 @@
       </button>
     </mat-form-field>
 
-    <mat-form-field class="example-form-field">
+    <mat-form-field appearance="fill" class="form-field">
       <mat-label>Deadline</mat-label>
-      <input matInput type="date" [(ngModel)]="date" />
+      <input matInput [matDatepicker]="picker" [(ngModel)]="date" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
 

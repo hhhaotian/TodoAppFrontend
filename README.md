@@ -8,6 +8,8 @@
    2. delete domain: 34.151.70.45
 
 
+___
+
 There are two types of users: normal users and admin
 
 ## Normal users

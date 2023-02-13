@@ -1,11 +1,15 @@
 <div class="container">
-  <div class="todo-header">
-    <h2>Welcome back, {{ username }}</h2>
-    <button mat-raised-button color="primary" (click)="logout()">
-      Log out
-    </button>
+  <div class="spinner" *ngIf="todoService.showSpinner">
+    <mat-spinner></mat-spinner>
   </div>
-
-  <app-input-todo></app-input-todo>
-  <app-todo-list></app-todo-list>
+  <div class="todo-contianer" *ngIf="!todoService.isLoading">
+    <div class="todo-header">
+      <h2>Welcome back, {{ username }}</h2>
+      <button mat-raised-button color="primary" (click)="logout()">
+        Log out
+      </button>
+    </div>
+    <app-input-todo></app-input-todo>
+    <app-todo-list></app-todo-list>
+  </div>
 </div>

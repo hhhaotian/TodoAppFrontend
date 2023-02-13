@@ -7,6 +7,11 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core'
+
 
 const modules = [
   MatInputModule,
@@ -16,7 +21,11 @@ const modules = [
   MatSelectModule,
   MatGridListModule,
   MatTableModule,
-  MatCardModule
+  MatCardModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 ]
 
 @NgModule({

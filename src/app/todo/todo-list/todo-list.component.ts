@@ -12,13 +12,10 @@ export class TodoListComponent {
 
   constructor(public todoService:TodoService){}
 
-  ngOnInit(){
-    //get todos from database
-    this.todoService.getTodos()
-  }
 
   // delete a todo with received todo id
   deleteTodo(id:number){
+    this.todoService.showSpinner = true
     //delete a todo data in database
     this.todoService.deleteTodo(id).subscribe(res => {
       //if database deleted successfully, delete the todo locally
@@ -30,6 +27,7 @@ export class TodoListComponent {
           }
         })
         this.todoService.todos.splice(index, 1)
+        this.todoService.showSpinner = false
       }
     })
   }

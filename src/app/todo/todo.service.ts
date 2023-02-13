@@ -9,18 +9,22 @@ import { URL } from '../../URL'
 export class TodoService {
 
   todos: Todo[] = []
-
-  // url = "http://localhost:3000/api"
-
+  showSpinner: boolean = false
+  isLoading: boolean = false
   constructor(private http: HttpClient){}
 
   getTodos(){
+    this.isLoading = true
+    this.showSpinner = true
     const token = localStorage.getItem("token")
-    // const headers = new HttpHeaders().set({'authorization' : `Bear ${token}`})
     this.http.get<GetTodoResponse>(`${URL}/api/todos/query`, {headers: {'authorization': `Bearer ${token}`}})
     .subscribe(todos => {
       this.todos = todos.data
+      this.showSpinner =false
+      this.isLoading = false
     }, error => {
+      this.showSpinner = false
+      this.isLoading = false
       console.log(error)
     })
   }
@@ -32,7 +36,7 @@ export class TodoService {
       deadline,
       done: false
     }
-    console.log(newTodo)
+    this.showSpinner = true
     this.http.post<AddTodoResponse>(
       `${URL}/api/todos/add`, 
       newTodo,
@@ -40,8 +44,10 @@ export class TodoService {
       )
     .subscribe(res => {
       this.todos.push(res.data)
+      this.showSpinner =false
     },err => {
       console.log(err)
+      this.showSpinner =false
     })
   }
 

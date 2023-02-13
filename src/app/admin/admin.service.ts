@@ -13,6 +13,7 @@ export class AdminService {
   }
 
   userList: UserInfo[] = []
+  
 
   getUserList(){
     const token = localStorage.getItem('token')
